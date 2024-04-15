@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cake Shop</title>
+    <style>
+      
+    body {
+    background-image: url('image5.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    }
+
+    .container {
+    display: flex;
+    flex-direction: column;
+    align-items:  flex-start;;
+    justify-content: center;
+    padding: 0 20px;
+    height: 100vh;
+    }
+
+
+      nav {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      }
+
+      nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+      }
+
+      nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+      color: #ff5500;
+      }
+
+      .container {
+      padding-top: 80px;
+      text-align: center;
+      color: #fff;
+      }
+
+      .welcome {
+      margin-bottom: 40px;
+      float: left;
+      width: 50%;
+      margin-top: 50px; /* Add this line */
+      }
+
+      .welcome h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+      margin-top: -250px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5),
+      2px -2px 2px rgba(255, 255, 255, 0.5);
+      }
+
+      .welcome p {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      width: 70%;
+      margin: 0 auto;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5),
+      2px -2px 2px rgba(255, 255, 255, 0.5);
+      }
+
+      .button {
+      display: block;
+      background-color: #ffcc00;
+      color: #000000;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background-color 0.2s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 40px;
+      margin-left: 0; /* Add this line */
+      height: 25px; /* Add this line */
+      line-height: 25px; /* Add this line */
+      width: 150px; /* Add this line */
+      margin-left: 250px; /* Add this line */
+      }
+
+      .button:hover {
+      background-color: #e0b90f;
+      }
+
+    
+
+      
+
+       .aboutbody {
+       margin-top:2 0;
+       padding: 0;
+       font-family: Arial, sans-serif;
+       background-color: #f0f0f0; /* Background color for the entire page */
+       }
+
+       .about-section {
+       background: linear-gradient(45deg, #e0e0e0, #f2f2f2); /* Gradient background */
+       padding: 20px;
+       border-radius: 15px; /* Rounded corners */
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+       max-width: 600px; /* Limit the width of the section */
+       margin: 20px auto; /* Center the section */
+       }
+
+      .about-section h2 {
+       margin-top:50;
+       font-size: 28px; /* Larger font size */
+       color: #333; /* Darker text color */
+       text-align: center; /* Center align the title */
+       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Text shadow effect */
+       }
+
+
+     
+
+
+      /* Styles for the specialities section */
+       .specialities {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        justify-content: center;
+        padding: 20px;
+        }
+
+        .speciality {
+        text-align: center;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+        }
+
+        .speciality:hover {
+        transform: translateY(-5px);
+        }
+
+        .speciality img {
+        width: 80%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+        }
+
+        .speciality h2 {
+        margin-top: 15px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333333;
+        }
+
+       .price {
+        margin-top: 5px;
+        color: #d14836;
+        font-size: 1rem;
+        }
+
+
+       /* Styles for the about us and contact us sections */
+ .       about-us,.contact-us {
+         max-width: 800px;
+         margin: 50px auto;
+         padding: 20px ;
+         background-color: #fff;
+         border-radius: 8px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         }
+
+       .about-us h2{
+        font-size: 2rem;
+        margin-bottom: 20px;
+        }
+
+       .about-us p{
+        color: #333;
+        line-height: 1.6;
+        }
+
+
+       /* Styles for the registration form */
+       .registration-form {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .registration-form label {
+       font-size: 1.2rem;
+       font-weight: bold;
+       margin-bottom: 20px;
+       }
+
+       .about-us p{
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        }
+
+
+
+       .contact-container {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh; /* Adjust this value to position the form vertically */
+       }
+
+ 
+       .contactform {
+       background-color: #fff;
+       border-radius: 8px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       padding: 20px;
+       width: 50%; /* Adjust this value to set the width of the form */
+       }
+
+
+      .contactform h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      }
+
+     .contactform label {
+     display: block;
+     margin-bottom: 5px;
+     }
+
+    .contactform input[type="text"],
+    .contactform input[type="email"],
+    .contactform textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
+    }
+
+    .contactform input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+
+  .contactform input[type="submit"]:hover {
+  background-color: #45a049;
+  }
+
+  .form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust this value to position the form vertically */
+  }
+
+  .registration-form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 50%; /* Adjust this value to set the width of the form */
+  }
+
+  .registration-form label {
+   font-size: 1.2rem;
+   font-weight: bold;
+   margin-bottom: 10px;
+   }
+
+   .registration-form input[type="text"],
+   .registration-form input[type="Cake Name"] {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    }
+
+    .registration-form select {
+     width: 100%;
+     height: 40px;
+     border-radius: 5px;
+     border: 1px solid #ccc;
+     padding: 10px;
+     margin-bottom: 20px;
+     }
+
+     .registration-form input[type="number"] {
+      width: 100%;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+      }
+
+     .registration-form input[type="submit"] {
+      width: 150px;
+      height: 40px;
+      background-color: #ffcc00;
+      color: #000000;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      }
+
+      .registration-form input[type="submit"]:hover {
+       background-color: #e0b90f;
+      }
+ 
+
+      
+
+
+
+
+    .footer {
+      background-image: url('cupcake.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 2rem;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      height: 600px; /* Adjust the height as needed */
+    }
+
+    .footer:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    }
+
+    .footer-nav {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 0.5rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    .footer-nav ul li {
+      margin: 0 1rem;
+    }
+
+    .footer-nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-nav ul li a:hover {
+      color: #ffc107;
+    }
+
+    .footer h2 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .footer p {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .footer-nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.3rem; /* Increase the font size for more boldness */
+      font-weight: bold; /* Add font weight for boldness */
+      transition: color 0.3s ease;
+    }
+
+        }
+
+    </style>
+
+
+<script type="text/javascript">
+function display()
+{
+alert("thank you for placing order");
+}
+</script>
+  </head>
+
+
+  <body> 
+<body class="first-page">
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section class="welcome">
+      <h1>Welcome to Delightful Cake Shop</h1>
+      <p>
+        lightning your moments.....
+      </p>
+      <a href="#" class="button">Order Now</a>
+    </section>
+   
+  </div>
+
+
+
+ <section class="about-section">
+  <h2>OUR SPECIALITY</h2>
+</section>
+</h1>
+    <div class="specialities">
+  <div class="speciality">
+    <img src=""C:\Users\sejal patil\Desktop\file.html\cake1.jpg"" alt="C:\Users\sejal patil\Desktop\file.html\cake1.jpg">
+    <h2>RED VELVET</h2>
+    <p class="price">$200</p>
+  </div>
+  <div class="speciality">
+    <img src="C:\Users\sejal patil\Desktop\file.html\cake2.jpg" alt=""C:\Users\sejal patil\Desktop\file.html\cake2.jpg">
+    <h2>butterscotch</h2>
+    <p class="price">$250</p>
+  </div>
+  <div class="speciality">
+    <img src="C:\Users\sejal patil\Desktop\file.html\cake3.jpg" alt=""C:\Users\sejal patil\Desktop\file.html\cake3.jpg">
+    <h2>keser pista</h2>
+    <p class="price">$300</p>
+  </div>
+  <div class="speciality">
+    <img src="C:\Users\sejal patil\Desktop\file.html\cake4.jpg" alt="C:\Users\sejal patil\Desktop\file.html\cake4.jpg">
+    <h2>Chocolate</h2>
+    <p class="price">$350</p>
+  </div>
+  <div class="speciality">
+    <img src="C:\Users\sejal patil\Desktop\file.html\cake5.jpg" alt="C:\Users\sejal patil\Desktop\file.html\cake5.jpg">
+    <h2>rasmalai</h2>
+    <p class="price">$400</p>
+  </div>
+  <div class="speciality">
+    <img src="C:\Users\sejal patil\Desktop\file.html\cake6.jpg" alt="C:\Users\sejal patil\Desktop\file.html\cake6.jpg">
+    <h2>FRUIT</h2>
+    <p class="price">$450</p>
+  </div>
+  <div class="speciality">
+    <img src="C:\Users\sejal patil\Desktop\file.html\cake7.jpg" alt="C:\Users\sejal patil\Desktop\file.html\cake7.jpg">
+    <h2>truffle</h2>
+    <p class="price">$500</p>
+  </div>
+  <div class="speciality">
+    <img src="C:\Users\sejal patil\Desktop\file.html\cake8.jpg" alt="C:\Users\sejal patil\Desktop\file.html\cake8.jpg">
+    <h2>choco esprello</h2>
+    <p class="price">$550</p>
+  </div>
+  <div class="speciality">
+    <img src="C:\Users\sejal patil\Desktop\file.html\cake9.jpg" alt="C:\Users\sejal patil\Desktop\file.html\cake9.jpg">
+    <h2>Coconut</h2>
+    <p class="price">$600</p>
+  </div>
+  <div class="speciality">
+    <img src="C:\Users\sejal patil\Desktop\file.html\cake10.jpg" alt="C:\Users\sejal patil\Desktop\file.html\cake10.jpg">
+    <h2>almond</h2>
+    <p class="price">$650</p>
+  </div>
+  <div class="speciality">
+    <img src="C:\Users\sejal patil\Desktop\file.html\cake11.jpg" alt="C:\Users\sejal patil\Desktop\file.html\cake11.jpg">
+    <h2>Banana</h2>
+    <p class="price">$700</p>
+  </div>
+  <div class="speciality">
+    <img src="C:\Users\sejal patil\Desktop\file.html\cake12.jpg" alt="C:\Users\sejal patil\Desktop\file.html\cake12.jpg">
+    <h2>Cup cake</h2>
+    <p class="price">$750</p>
+  </div>
+</div>
+
+
+
+<div class="form-container">
+      <div class="registration-form">
+      <form>
+       <label for="cakeName">Cake Name:</label>
+        <select name="cakeName" id="cakeName" required>
+          <option value="">Select a cake</option>
+          <option value="Red Velvet">Red Velvet</option>
+ <option value="Red Velvet">butterscotch</option>
+ <option value="Red Velvet">banana</option>
+ <option value="Red Velvet">pistabadam</option>
+ <option value="Red Velvet">choco esprillo</option>
+ <option value="Red Velvet">rasmalai</option>
+ <option value="Red Velvet">chocolate</option>
+ <option value="Red Velvet">truffle</option>
+ <option value="Red Velvet">almond</option>
+ <option value="Red Velvet">coconut</option>
+ <option value="Red Velvet">fruit</option>
+ <option value="Red Velvet">cup cake</option>
+
+        </select>
+        <label for="price">price:</label>
+        <input type="text" id="price" name="price" required />
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required />
+        <label for="contactNumber">Contact Number:</label>
+        <input
+          type="number"
+          id="contactNumber"
+          name="contactNumber"
+          required
+        />
+        <input type="submit"  onclick="display()" value="place order" />
+      </form>
+    </div>
+</div>
+
+
+    <div class="about-us">
+      <h2>About Us</h2>
+    <p>Welcome to <strong style="color: #ff6600;">DELIGHTFUL CAKESHOP</strong>, where every bite is a delight! At <strong style="color: #ff6600;">DELIGHTFUL CAKESHOP</strong>, we believe in crafting not just cakes, but memories that last a lifetime. Our journey began with a passion for baking and a dream to spread joy through delectable treats.</p>
+
+      
+      <p>Beyond our passion for baking, we also prioritize customer satisfaction. We listen to your preferences, accommodate special requests, and go above and beyond to exceed your expectations. Because at <strong style="color: #ff6600;">DELIGHTFUL CAKESHOP</strong>, your happiness is our priority.</p>
+
+    <p>Thank you for choosing <strong style="color: #ff6600;">DELIGHTFUL CAKESHOP</strong> for your sweet moments. Join us on this journey as we continue to spread sweetness, one slice at a time.</p>
+
+    <p class="owner">Sincerely, <br>SEJAL PATIL<br>Owner, DELIGHTFUL CAKESHOP</p>   
+</div>
+
+
+<div class="contact-container">
+<div class="contactform">
+   <h2>Contact Us</h2>
+   <form>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br> 
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" required></textarea><br>
+    <input type="submit" value="Submit">
+ </form>
+</div>
+</div>
+
+ <div class="footer">
+    <h2>Contact Us</h2>
+    <p>Phone: (123) 456-7890</p>
+    <p>Email: delightful@cakes.com</p>
+    <p>Address: 123 Main Street, City, Country</p>
+    <div class="footer-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  </body>
+</html>
+
